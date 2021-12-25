@@ -6,16 +6,15 @@ body{
 	color:white; */
 	grid-gap:0em;
 	justify-content:center;
-
+	font-family: arial, sans-serif;
 }
 p{
-	font-family: arial, sans-serif;
-	line-height: 1.3;
 }
 h1{
 
 }
 h2{
+	margin-top:2.2em;
 }
 h3{
 }
@@ -40,8 +39,39 @@ a:hover{
 	position: -webkit-sticky;
 	top: 0px;
 	background-color:white;
-	padding:0.3em;
 	border-bottom: 2px solid lightgray;
+	display:flex;
+	z-index:100;
+	height:2.2em;
+}
+.nav-menu{
+}
+.nav-menu-title{
+	margin:0.2em 0.5em;
+	padding:0.3em;
+}
+.nav-menu:hover .nav-menu-inner, .nav-menu:active .nav-menu-inner{
+	display:block;
+	margin:0em;
+}
+.nav-menu-inner{
+	position:absolute;
+	background-color:white;
+	border-bottom: 1px solid lightgray;
+	border-right: 1px solid lightgray;
+	border-left: 1px solid lightgray;
+	background-color: white;
+	display:none;
+	margin:0em;
+	z-index:100;
+}
+.nav-menu-inner ul{
+	padding: 0em 0.2em;
+	margin: 0em;
+}
+.nav-menu-inner li{
+	padding: 0.2em 0.2em;
+	list-style-type: none;
 }
 @media (max-width:40em){
 	#menu2, #menu3{
@@ -61,6 +91,7 @@ a:hover{
 	grid-row: 3;
 	text-align:center;
 	width: 9em;
+
 /*	border-right: 2px lightblue solid; */
 }
 #menu3{
@@ -69,19 +100,22 @@ a:hover{
 	text-align:center;
 	width: calc(8em - 2px);
 	border-left: 2px lightblue solid;
+
 }
 .menu-container{
 	display: flex;
 	flex-direction:column;
 	position: sticky;
 	position: -webkit-sticky;
-	top: 7.9em;
-
+	top: 6em;
+	z-index:90;
 }
 .menu-item{
 	padding: 0.5em;
 	text-align: center;
+	
 }
+
 
 #content{
 	grid-column: 2;
@@ -106,15 +140,18 @@ a:hover{
 }
 .content-item p{
 	max-width: 45em;
+	line-height: 1.3;
 }
 
-#c1{
+#c1:hover + #m1{
+	border-right: 2px solid blue;
 }
 #c2{
 }
 #footer{
 	grid-column: 1 / 4;
 	grid-row: 4;
+	border-top: 2px solid lightgray;
 
 }
 
