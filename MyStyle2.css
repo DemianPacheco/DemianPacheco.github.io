@@ -2,11 +2,13 @@ html{
 }
 body{
 	display:grid;
-	/* background-color: #222222;
-	color:white; */
 	grid-gap:0em;
-	justify-content:center;
 	font-family: arial, sans-serif;
+	justify-content:center;
+}
+:root{
+	--chosen-bckg-color: white;
+	--chosen-color:black;
 }
 p{
 }
@@ -28,7 +30,6 @@ a:hover{
 	grid-column: 1 / 4;
 	text-align:center;
 	height: 3em;
-	background-color: white;
 }
 .menu{
 }
@@ -38,11 +39,11 @@ a:hover{
 	position: sticky;
 	position: -webkit-sticky;
 	top: 0px;
-	background-color:white;
 	border-bottom: 2px solid lightgray;
 	display:flex;
 	z-index:100;
 	height:2.2em;
+	background-color:white;
 }
 .nav-menu{
 }
@@ -139,7 +140,7 @@ a:hover{
 	padding:3px;
 }
 .content-item p{
-	max-width: 45em;
+	max-width: 35em;
 	line-height: 1.3;
 }
 
@@ -147,6 +148,16 @@ a:hover{
 	border-right: 2px solid blue;
 }
 #c2{
+}
+rt{
+	font-size:0.6em;
+	color:gray;
+
+}
+ruby{
+	font-size:1.2em;
+	word-spacing:1.2;
+	ruby-position: under;
 }
 #footer{
 	grid-column: 1 / 4;
